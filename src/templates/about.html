@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block 'title' %} {% trans 'About' %} | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+    <div class="col-lg-12">
+        <div class="jumbotron">
+              <h1>{{ about.title }} <small>{{ about.timestamp }}</small></h1>
+                <hr/>
+              <p>{{ about.text }}</p>
+          </div>
+    </div>
+
+{% endblock content %}
